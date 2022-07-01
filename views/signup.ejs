@@ -104,7 +104,6 @@ button:hover {
 }
 </style>
 <body>
-<div class="note scrolling"><h2>NOTE :This page is under development(You can still fill in the credentials to signup)</h2></div> 
 
 <form action="/signup" style="border:1px solid #ccc", method="post">
   <div class="container">
@@ -112,9 +111,9 @@ button:hover {
     <p>Please fill in this form to create an account.</p>
     <hr>
     <label for="name"><b>Username</b></label>
-    <input type="text" placeholder="Username" name="name">
+    <input type="text" placeholder="Username" name="username" required>
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="e-mail" required>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
@@ -122,6 +121,8 @@ button:hover {
       <button type="submit" value="Signup">Sign Up</button>
         <a href="Login">Already have an account!</a>
     </div>
+
+    
   </div>
 </form>
 </body>

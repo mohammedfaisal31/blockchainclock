@@ -1,1 +1,34 @@
-<h2>MARKET is under development:(</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form action="/trade" method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter Stock Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Stock name" name="sname">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Price</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Price" name="price">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Amount</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Amount" name="amount">
+          </div>
+          
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Limit buy/sell</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Buy</button>
+        <button  class="btn btn-primary">Sell</button>
+        
+    </form>
+</body>
+</html>
