@@ -34,12 +34,37 @@
 										<h1>Market Stats</h1>
 									</header>
 
-									<span class="image main"><a href="https://www.nseindia.com/"><img src="images/Intro_slide_-_digital_stock_chart_going_up_-_s.width-700.jpg" alt="" /></a></span>
+									<span class="image main"><a href="https://www.nseindia.com/"><img src="https://incomemachine.co/wp-content/uploads/2021/07/stockmarket2-1038x576.jpg" alt="" /></a></span>
 									<p><a href="https://www.nseindia.com/">Click here</a> to view live stats</p>
 									
 									<hr class="major" />
 									<h3>You holdings</h3>
-									<table class="styled-table">
+									<%if((stock=JSON.stringify(stock)) != null){%>
+										<table class="styled-table">
+											<thead>
+												<tr>
+													<th>Asset</th>
+													<th>Shares</th>
+													<th>Value</th>
+													
+												</tr>
+										</thead>
+										
+										<tbody>
+											<%for(let i=1;i< Object.keys(JSON.parse(stock)).length-1;i++){%>
+												<% if( JSON.parse(stock)[Object.keys(JSON.parse(stock))[i]] ){%>
+												<tr>
+													<th><%=Object.keys(JSON.parse(stock))[i]%></th>
+													<th><%=JSON.parse(stock)[Object.keys(JSON.parse(stock))[i]]%></th>
+													<th>$<%=(JSON.parse(stock)[Object.keys(JSON.parse(stock))[i]]) * (Math.floor(Math.random() * 100) + 1)%></th>
+													
+												</tr>	<%}%>
+											<%}%>
+										</tbody>
+									<%}else{%>
+										<p>You do not have any holdings yet!</p>
+									<%}%>
+									<!--<table class="styled-table">
 										<thead>
 											<tr>
 												<th>Asset</th>
@@ -67,8 +92,7 @@
 												<td>26,897.8515625</td>
 												
 											</tr>
-											<!-- and so on... -->
-										</tbody>
+										</tbody>-->
 									</table>
 								</section>
 								<h3>Click below trade now</h3>
